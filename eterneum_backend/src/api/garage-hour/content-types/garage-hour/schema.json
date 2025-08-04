@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "garage_hours",
+  "info": {
+    "singularName": "garage-hour",
+    "pluralName": "garage-hours",
+    "displayName": "garage hour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "garage_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::garage.garage"
+    },
+    "day": {
+      "type": "enumeration",
+      "enum": [
+        "Monday, ",
+        "Tuesday, ",
+        "Wednesday, ",
+        "Thursday, ",
+        "Friday, ",
+        "Saturday"
+      ]
+    },
+    "open_time": {
+      "type": "time"
+    },
+    "close_time": {
+      "type": "time"
+    }
+  }
+}

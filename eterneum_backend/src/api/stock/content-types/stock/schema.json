@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stocks",
+  "info": {
+    "singularName": "stock",
+    "pluralName": "stocks",
+    "displayName": "stock"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "garage_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::garage.garage"
+    },
+    "tyre_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyer.tyer"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stock_alerts",
+  "info": {
+    "singularName": "stock-alert",
+    "pluralName": "stock-alerts",
+    "displayName": "stock alert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "garage_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::garage.garage"
+    },
+    "tyre_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyer.tyer"
+    },
+    "current_quantity": {
+      "type": "integer"
+    },
+    "alert_type": {
+      "type": "enumeration",
+      "enum": [
+        "LOW_STOCK",
+        "OUT_OF_STOCK",
+        "CRITICAL",
+        "OVERSTOCK"
+      ]
+    },
+    "alert_time": {
+      "type": "datetime"
+    }
+  }
+}

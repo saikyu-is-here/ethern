@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "reservation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "garage_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::garage.garage"
+    },
+    "vehicle_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vehicle.vehicle"
+    },
+    "tyre_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tyer.tyer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "reservation_date": {
+      "type": "datetime"
+    },
+    "statu": {
+      "type": "enumeration",
+      "enum": [
+        "unread",
+        "read",
+        "archived"
+      ]
+    },
+    "amount": {
+      "type": "decimal"
+    }
+  }
+}
